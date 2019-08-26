@@ -1,24 +1,63 @@
-<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-    <div class="mdl-layout__header-row portfolio-logo-row">
-        <span class="mdl-layout__title">
-            <div class="portfolio-logo"></div>
-            <span class="mdl-layout__title">Simple portfolio website</span>
-        </span>
-    </div>
-    <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-        <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-            <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-            <a class="mdl-navigation__link" href="blog.html">Blog</a>
-            <a class="mdl-navigation__link" href="about.html">About</a>
-            <a class="mdl-navigation__link" href="contact.html">Contact</a>
-        </nav>
-    </div>
+
+
+<header>
+
+    <div class="top-menu">
+
+        <ul class="left-area welcome-area mt-2">
+            <li class="hello-blog">Hello nice people, welcome to my blog</li>
+            <li><a href="mailto:contact@juliblog.com">contact@juliblog.com</a></li>
+        </ul><!-- left-area -->
+
+
+        <div class="right-area">
+
+            <div class="src-area">
+                <form action="post">
+                    <input class="src-input" type="text" placeholder="Search">
+                    <button class="src-btn btn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div><!-- src-area -->
+
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            <!-- right-area -->
+
+        </div><!-- right-area -->
+
+    </div><!-- top-menu -->
+
+    <div class="middle-menu center-text"><a href="#" class="logo"><img src="../../../assets/pages/images/logo.png" alt="Logo Image"></a></div>
+
+    <div class="bottom-area">
+
+        <div class="menu-nav-icon" (click)="openMenu()"><i class="fa fa-bars"></i></div>
+
+        <ul class="main-menu" id="navbarNav" [ngStyle]="{'display':active}">
+            <li class="drop-down"><a href="#">HOME<i class="fa fa-angle-down"></i></a>
+
+                <ul class="drop-down-menu">
+                    <li><a href="#">FEATURED</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <!-- <li class="drop-down"><a href="#">CATEGORIES<i class="fa fa-angle-right"></i></a>
+                        <ul class="drop-down-menu drop-down-inner">
+                            <li><a href="#">FEATURED</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">CATEGORIES</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+
+            </li>
+            <li><a href="#">FEATURED</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CATEGORIES</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">LOGIN</a></li>
+        </ul><!-- main-menu -->
+
+    </div><!-- conatiner -->
 </header>
-<div class="mdl-layout__drawer mdl-layout--small-screen-only">
-    <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-        <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-        <a class="mdl-navigation__link" href="blog.html">Blog</a>
-        <a class="mdl-navigation__link" href="about.html">About</a>
-        <a class="mdl-navigation__link" href="contact.html">Contact</a>
-    </nav>
-</div>

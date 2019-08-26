@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div class="hold-transition skin-blue sidebar-mini" id ="siderbarMenu" [ngClass]="{'sidebar-collapse': activeSibar}">
+    <div class="wrapper">
+
+        <app-admin-header (headerChange)="changeSibar()"></app-admin-header>
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <router-outlet></router-outlet>
+        </div>
+        <app-admin-footer></app-admin-footer>
+    </div>
+</div>    

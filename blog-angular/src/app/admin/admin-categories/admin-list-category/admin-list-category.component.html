@@ -1,0 +1,43 @@
+<section class="content-header">
+    <button class="btn btn-primary btn-sm" type="button" routerLink="../create"><i class="fa fa-plus"></i> Tạo mới
+    </button>
+
+</section>
+
+<!-- Main content -->
+<section class="content" style="background: white">
+    <div class="container-fluid">
+        <input type="text" placeholder="Tìm kiếm.." [(ngModel)]="searchText"
+            class="form-control form-control-sm col-6 float-right">
+        <br><br>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tên</th>
+                    <!--<th scope="col">Menu</th>-->
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categories | grdFilter: {name_category: searchText}; let i= index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{item.name_category}}</td>
+
+                    <!--<td style="width: 10%">{{item.name}}</td>-->
+                    <td style="width: 1%">
+                        <span class="fts-100 badge badge-primary active" [routerLink]="['../detail', item.id]"><i
+                                class="fa fa-edit"></i></span>
+                        <!--<span class="ml-1 fts-100 badge badge-danger active"><i class="fa fa-trash" (click)="openModal(template, item)"></i></span>-->
+                    </td>
+                </tr>
+            </tbody>
+            <!-- <tfoot>
+
+                          </tfoot> -->
+        </table>
+    </div>
+
+
+
+</section>

@@ -1,0 +1,37 @@
+<section class="content-header">
+    <button class="btn btn-primary btn-sm" type="button" (click)="back()"><i class="fa fa-arrow-left"></i> Trở lại
+    </button>
+    <button class="btn btn-primary btn-sm ml-1" type="button" (click)="add()"><i class="fa fa-plus"></i> Tạo mới
+    </button>
+    <button class="btn btn-success btn-sm ml-1" type="button" [disabled]="!myform.form.valid" (click)="save()"><i
+            class="fa fa-save"></i> Lưu
+    </button>
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form #myform="ngForm">
+                        <div class="form-group">
+                            <label>Tên</label>
+                            <input type="text" class="form-control" name="name" [(ngModel)]="category.category_name"
+                                #name="ngModel" required>
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)">
+                                <div *ngIf="name.errors.required">
+                                    <small class="form-text text-muted alert alert-danger"> <i
+                                            class="fa fa-exclamation-triangle"></i> Nhập tên</small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

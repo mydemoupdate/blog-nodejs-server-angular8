@@ -12,7 +12,9 @@ const adminRoutes: Routes = [
       {
         path: '',
         children: [
-          { path: '', component: AdminDashboardComponent }
+          { path: '', component: AdminDashboardComponent },
+          { path: 'category',
+           loadChildren: () => import('./admin-categories/admin-categories.module').then(mod => mod.AdminCategoriesModule)}
         ]
       }
     ]

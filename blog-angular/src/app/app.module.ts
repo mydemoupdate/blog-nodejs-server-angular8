@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot({      // Register NgxToast NPM module
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,      
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

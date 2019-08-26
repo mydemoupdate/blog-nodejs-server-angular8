@@ -1,0 +1,117 @@
+<header class="main-header">
+        <!-- Logo -->
+        <a href="javascript:;" class="logo" routerLink="">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>AD</b></span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Administration</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="javascript:;" class="sidebar-toggle" data-toggle="push-menu" role="button" (click)="openSider()">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+    
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+            
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="user user-menu" style="margin-right: 10px">
+                <a href="#">
+                  <img src="https://miro.medium.com/max/1205/1*04-1NGmLRPaeffr9dJG-7Q.jpeg" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Person</span>
+                </a>
+            
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+          
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+    
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Tìm kiếm ...">
+              <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                    </button>
+                  </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="treeview" (click)="onSelect(0)" [ngClass]="{'active': positionMenu==0}"
+            routerLink="./" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">
+              <a href="javascript:;">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+              </a>
+            </li>  
+            <li class="treeview" (click)="onSelect(1)" [ngClass]="{'active': positionMenu==1}" routerLink="./category">
+              <a href="javascript:;">
+                <i class="fa fa-dashboard"></i> <span>Category</span>
+              </a>
+            </li>  
+            <li class="treeview" (click)="onSelect(2)" [ngClass]="{'active': positionMenu==2}" routerLink="./posts">
+              <a href="javascript:;">
+                <i class="fa fa-dashboard"></i> <span>Posts</span>
+              </a>
+            </li>  
+            <li class="treeview" (click)="onSelect(4)" [ngClass]="{'active menu-open': positionMenu==4}">
+              <a href="javascript:;">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <span class="pull-right-container">
+                  <span class="fa fa-angle-left pull-right"></span>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Layout Options</span>
+                <span class="pull-right-container">
+                  <span class="label label-primary pull-right"></span>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+              </ul>
+            </li>
+    
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Charts</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Morris</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Flot</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+              </ul>
+            </li>
+    
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>

@@ -21,4 +21,6 @@ Student.getAllStuent = function (result) {
       });   
 };
 
+
+
 module.exports = Student;
